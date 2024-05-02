@@ -19,7 +19,7 @@ def is_prime(n):
         return False
 
     # Divide n by every odd number from 3 to sqrt(n)
-    for x in range(3, int(n**0.5), 2):
+    for x in range(3, int(n**0.5) + 1, 2):
         result = n / x
         if result % 2 == 0:
             return False
