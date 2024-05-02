@@ -1,9 +1,16 @@
 def get_input():
-    n = int(input("Enter a positive integer: "))
-    while n < 0:
-        n = int(input("Enter a POSITIVE integer: "))
+    cond = True
+    while cond:
+        try:
+            n = int(input("Enter a positive integer: "))
 
-    # Edge case 2: user passes non integer value
+        except ValueError:
+            pass
+
+        else:
+            if n > 0:
+                cond = False
+
     return n
 
 
